@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="334.782">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="38.911">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test@example.com" field...............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="13.939">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "test@example.com" and "P@ssw0rd"..............passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="13.754">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "wrong@example.com" and "P@ssw0rd"...........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | users could switch currency correctly" name="user could switch currency to Euro" time="9.436">
+<system-out><![CDATA[Given user switches currency list to Euro...................................passed
+Then 4 products switch to Euro..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": F04-search |user could search using product name or product sku" name="user could search using product name" time="10.747">
+<system-out><![CDATA[Given user enters book in search box........................................passed
+When user clicks search buttons.............................................passed
+Then search page is opened..................................................passed
+And search result is shown..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": F04-search |user could search using product name or product sku" name="user could search using product name 2" time="10.057">
+<system-out><![CDATA[Given user enters laptop in search box......................................passed
+When user clicks search buttons.............................................passed
+Then search page is opened..................................................passed
+And search result is shown..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": F04-search |user could search using product name or product sku" name="user could search using product name 3" time="9.253">
+<system-out><![CDATA[Given user enters nike in search box........................................passed
+When user clicks search buttons.............................................passed
+Then search page is opened..................................................passed
+And search result is shown..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": F04-search |user could search using product name or product sku" name="user could search using sku" time="31.093">
+<system-out><![CDATA[Given user enters SCI_FAITH in search box...................................passed
+When user clicks search buttons.............................................passed
+Then search page is opened..................................................passed
+And user clicks the result product..........................................passed
+Then product page is opened.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": F04-search |user could search using product name or product sku" name="user could search using sku 2" time="21.176">
+<system-out><![CDATA[Given user enters APPLE_CAM in search box...................................passed
+When user clicks search buttons.............................................passed
+Then search page is opened..................................................passed
+And user clicks the result product..........................................passed
+Then product page is opened.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname=": F04-search |user could search using product name or product sku" name="user could search using sku 3" time="12.601">
+<system-out><![CDATA[Given user enters SF_PRO_11 in search box...................................passed
+When user clicks search buttons.............................................passed
+Then search page is opened..................................................passed
+And user clicks the result product..........................................passed
+Then product page is opened.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_Hover category |User could hover Categories randomly" name="hover random category ans select random subcategory" time="11.566">
+<system-out><![CDATA[Given user hovers a category................................................passed
+And user selects subcategory................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_Home slider |user could navigate by Home sliders" name="first slider is clickable on home page" time="11.46">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given user clicks the first slider..........................................passed
+Then user directs to "https://demo.nopcommerce.com/nokia-lumia-1020"........failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Org.example.stepDefs.D06_homeSlidersStepDef.directs_toUrl(D06_homeSlidersStepDef.java:24)
+	at ✽.user directs to "https://demo.nopcommerce.com/nokia-lumia-1020"(file:///H:/Testing/E_Commerce/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F06_Home slider |user could navigate by Home sliders" name="second slider is clickable on home page" time="11.23">
+<failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given user clicks the second slider.........................................passed
+Then user directs to "https://demo.nopcommerce.com/iphone-6"................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Org.example.stepDefs.D06_homeSlidersStepDef.directs_toUrl(D06_homeSlidersStepDef.java:24)
+	at ✽.user directs to "https://demo.nopcommerce.com/iphone-6"(file:///H:/Testing/E_Commerce/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="40.541">
+<system-out><![CDATA[Given user opens facebook link..............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="21.948">
+<system-out><![CDATA[Given user opens twitter link...............................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="16.07">
+<failure message="Expected condition failed: waiting for number of open windows to be 2 (tried for 7 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'DESKTOP-SL459VR', ip: '192.168.3.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Mai\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:6056}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:6056/devtool..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c86ea16196814d5e126638aa987ce593" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user opens rss link...................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for number of open windows to be 2 (tried for 7 second(s) with 500 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-SL459VR', ip: '192.168.3.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Mai\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:6056}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:6056/devtool..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c86ea16196814d5e126638aa987ce593
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Org.example.stepDefs.D07_followUsStepDef.open_newTab(D07_followUsStepDef.java:43)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///H:/Testing/E_Commerce/src/main/resources/features/F07_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="22.629">
+<system-out><![CDATA[Given user opens youtube link...............................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_Wishlist feature | User could add products to Wishlist" name="add product to wishlist" time="9.925">
+<system-out><![CDATA[Given user clicks wishlist icon.............................................passed
+Then successful message is displayed........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_Wishlist feature | User could add products to Wishlist" name="check wishlist quantity value" time="17.785">
+<system-out><![CDATA[Given user clicks wishlist icon.............................................passed
+And successful message is displayed.........................................passed
+When wishlist tab is clickable..............................................passed
+Then qty value got increased more then 0....................................passed
+]]></system-out>
+</testcase>
+</testsuite>
